@@ -19,8 +19,13 @@ def remove_stopwords(sentence):
         if w not in stp:
             filtered_sentence.append(w)
 
-    return filtered_sentence
+    s = " ".join(filtered_sentence)
+
+    return s
 
 
+def lower_case(sentence):
+    return sentence.lower()
 
 
+print(lower_case("Dam this is the cutest and saddest movie I have ever seen I played with my dog for an hour after watching this"))
