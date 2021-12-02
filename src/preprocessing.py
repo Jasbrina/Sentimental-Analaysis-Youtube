@@ -64,8 +64,3 @@ class preprocessing():
     def get_sent(self):
         return self.sentence
 
-
-
-# n = preprocessing("Dam this is the cutest and saddest movie I've ever seen I played with my dog for an hour after watching this, couldn't cry")
-# n.preprocess()
-# print(n.get_sent())
