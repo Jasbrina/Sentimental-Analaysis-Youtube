@@ -23,9 +23,27 @@ def remove_stopwords(sentence):
 
     return s
 
-
+# converts all words in sentence to lowercase
 def lower_case(sentence):
     return sentence.lower()
 
+# 
+def apostrophe(sentence):
+    appos = {
+        "aren't": "are not",
+        "can't": "cannot",
+        "didn't": "did not",
+        "doesn't": "does not",
+        "don't": "do not",
+        "i'll": "I will",
+        "i've": "I have",
+        "couldn't": "could not"
+    }
 
-print(lower_case("Dam this is the cutest and saddest movie I have ever seen I played with my dog for an hour after watching this"))
+    words = sentence.split()
+    reformed = [appos[word] if word in appos else word for word in words]
+    retval = " ".join(reformed)
+    return retval
+
+
+print(apostrophe(lower_case("Dam this is the cutest and saddest movie I've ever seen I played with my dog for an hour after watching this, couldn't cry")))
